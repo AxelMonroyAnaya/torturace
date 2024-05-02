@@ -108,6 +108,32 @@ tur1.goals()
 tur2.goals()
 tur1.pos1()
 tur2.pos2()
+
+###############
+def turns():
+    nom1 = input("\ningresa el nombre del jugador 1: ")
+    nom2 = input("\ningresa el nombre del jugador 2: " )
+    print("para ver quien ira primero...")
+    while True:
+        res1= int(input(f"\n{nom2} ingresa  un numero del 1 al 10"))
+        res2= int(input(f"\n{nom1} ingresa un numero del 1 al 10"))
+        if (res1 in range(1, 11) and res2 in range(1, 11)):
+            print(f"{nom1} ha ingresado el numero {res1}\n y {nom2} ha ingresado el numero: {res2}")
+            break
+        else:
+            print("\nel numero ingresado no es del 1 al 10, intenta de nuevo...\n")
+    if res1<res2:
+        pass
+################
+
+while True:
+    res = int(input("ingresa 1 para empezar el juego..\\n ingresa "
+                    "teclea culaquier otra tecla para salir"))
+    if res == 1:
+        print("bienvenido a carrera de tortugas..\n")
+        turns()
+        break
+
 #tur1.movI()
 
 
